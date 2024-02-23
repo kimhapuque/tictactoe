@@ -1,0 +1,116 @@
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.title {
+    font-size: 1em;
+    color: #39100e;
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+    animation: bounce 2s infinite; /* animação no titulo */
+    font-family: 'Comic Sans MS', cursive; /* muda a fonte do titulo */
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive; /* muda a fonte dos texto */
+    background-color: #ffccd5; /*fundo rosa */
+    color: #39100e; /* rosa escuro pro texto */
+    margin: 0; /* tira as margens padrão */
+    padding: 0; /* tira o preenchimento padrão */
+    background: url(assets/ewrwererwr.png); /* bg */
+    background-size: cover; /* redimensionar o bg para cobrir td */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* tira a repetição do bg */
+    background-position: center; /* centralizar o bg */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* alinhar o content no inicio da tela */
+    align-items: center;
+    height: 100vh; /* altura da tela inteira */
+    padding-top: 20px; /* Espaçamento de cima */
+}
+
+h1 {
+    font-size: 3em;
+    color: #39100e;
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+    animation: heartbeat 1.5s infinite;
+}
+
+.turn {
+    margin: 10px 0;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #39100e;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* tamanho do tabuleiro */
+    grid-template-rows: repeat(3, 150px); /* tamanho do tabuleiro */
+    gap: 10px; /* espaçamento entre as células do tabuleiro */
+    background-color: #fff; /* cor de fundo branca pro tabuleiro */
+    border-radius: 20px; /* canto arredondado */
+    padding: 20px; /* espaçamento interno */
+}
+
+.cell {
+    border: 2px solid #39100e; /* borda rosa escuro */
+    font-size: 4em; /* tamanho do texto nas celulas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffe4e1; /* cor de fundo rosa claro pras celulas */
+    border-radius: 10px; /* canto arredondado */
+}
+
+.cell:hover {
+    background-color: #ffc0cb; /* cor de fundo rosa mais escuro qd passa o mouse */
+}
+
+.turn, .message {
+    margin: 10px 0; /* espaçamento de fora */
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #fff; /* cor de fundo branca */
+    border: 2px solid #39100e; /* borda rosa escuro */
+    border-radius: 10px; /* canto arredondado */
+    padding: 10px; /* espaçamento interno */
+}
+
+.restart-btn {
+    background-color: #d6407e; /* cor do fundo rosa */
+    color: #fff; /* cor do texto branca */
+    border: 2px solid #fff; /* borda branca */
+    padding: 10px 20px; /* espaçamento interno */
+    font-size: 1em; /* tamanho da fonte */
+    border-radius: 10px; /* canto arredondado */
+    cursor: pointer; /* cursor de ponteiro qd passa o mouse */
+    margin-top: 20px; /* espaçamento superior */
+}
+
+.restart-btn:hover {
+    background-color: #ffc0cb; /* alterar a cor de fundo qd passar o mouse */
+}
